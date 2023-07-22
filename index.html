@@ -10,7 +10,7 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./styles/default.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
@@ -42,8 +42,16 @@
 
 				<div class="left-column">
 					<img id="profile_pic" src="">
+					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
 
+					<div id="theme-options-wrapper">
+						<div data-mode="light" id="light-mode" class="theme-dot"></div>
+						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+						<div data-mode="green" id="green-mode" class="theme-dot"></div>
+						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+					</div>
 
+					<p id="settings-note">*Theme settings will be saved for<br>your next vist</p>
 				</div>
 
 				<div class="right-column">
@@ -105,7 +113,7 @@
 				
 				<div class="social-links">
 					<img id="social_img" src="">
-					<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
+					<h3>Follow me on:</h3>
 
 					<a target="_blank" href="">Instagram</a>
 					<br>
@@ -165,24 +173,32 @@
 			<h3 style="text-align: center;">Contact</h3>
 
 			<form id="contact-form">
-				<a name="contact"></a>
+				
+				<div class="input-container">
+					<label for="name">Name:</label>
+					<input class="input-field" id="name" type="text" name="name">
+				</div>
 
-				<label>Name</label>
-				<input class="input-field" type="text" name="name">
+				<div class="input-container">
+					<label for="subject">Subject:</label>
+					<input class="input-field" id="subject" type="text" name="subject">
+				</div>
 
-				<label>Subject</label>
-				<input class="input-field" type="text" name="subject">
+				<div class="input-container">
+					<label for="email">Email:</label>
+					<input class="input-field" id="email" type="text" name="email">
+				</div>
 
-				<label>Email</label>
-				<input class="input-field" type="text" name="email">
+				<div class="input-container">
+					<label for="message">Message:</label>
+					<textarea class="input-field" id="message" name="message"></textarea>
+				</div>
 
-				<label>Message</label>
-				<textarea class="input-field" name="message"></textarea>
-
-				<input id="submit-btn" type="submit" value="Send">
+				<input id="submit-btn" class="default" type="submit" value="Send">
 			</form>
 		</div>
 	</section> 
 
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
