@@ -17,13 +17,27 @@ for (var i=0; themeDots.length > i; i++){
 	})
 }
 
+/* Use async await..., I know... */
 document.getElementById('submit-btn').addEventListener('click', (e) => {
     e.preventDefault();
-    e.target.setAttribute('height', '0');
+	btn = document.getElementById('submit-btn');
+	btn.setAttribute('disabled', '');
+	text = document.getElementById('submit-btn-text');
+	text.textContent = 'Sending...'
+	text.classList.toggle('hide');
+    btn.classList.toggle('hide');
     setTimeout(() => {
-        e.target.setAttribute('height', 'auto');
-    }, 1000);
-})
+		text.style.display = 'none';
+		btn.classList.toggle('hide');
+		setTimeout(() => {
+			text.style.display = 'block';
+			text.textContent = 'Send';
+			text.classList.toggle('hide');
+			btn.removeAttribute('disabled');
+		}, 3000);
+    }, 2500);
+});
+
 
 function setTheme(mode){
 	if(mode == 'light'){
