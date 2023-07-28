@@ -371,6 +371,7 @@ h6 { font-size: 16px;}
 }
 
 #submit-btn {
+	position: relative;
 	width: 15%; 
 	color: #fff;
 	background-color: var(--buttonColor);

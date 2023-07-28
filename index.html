@@ -2,14 +2,10 @@
 <html>
 <head>
 	<title>Anthony Deng</title>
-
-
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
-
 	<link rel="stylesheet" type="text/css" href="./styles/default.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
@@ -169,29 +165,29 @@
 
 	<section class="s2">
 		<div class="main-container">
-			<a href=""></a>
 			<h3 style="text-align: center;">Contact</h3>
-
 			<form id="contact-form">
 				
+				<input type="hidden" name="access_key" value="891ed976-b4f7-4f94-96cd-382191dfcfc1">
+
 				<div class="input-container">
 					<label for="name">Name:</label>
-					<input class="input-field" id="name" type="text" name="name">
+					<input class="input-field" id="name" type="text" name="name" required>
 				</div>
 
 				<div class="input-container">
 					<label for="subject">Subject:</label>
-					<input class="input-field" id="subject" type="text" name="subject">
+					<input class="input-field" id="subject" type="text" name="subject" required>
 				</div>
 
 				<div class="input-container">
 					<label for="email">Email:</label>
-					<input class="input-field" id="email" type="text" name="email">
+					<input class="input-field" id="email" type="email" name="email" required>
 				</div>
 
 				<div class="input-container">
 					<label for="message">Message:</label>
-					<textarea class="input-field" id="message" name="message"></textarea>
+					<textarea class="input-field" id="message" name="message" required></textarea>
 				</div>
 
 				<button type="submit" id="submit-btn"><div id="submit-btn-text">Send</div></button>

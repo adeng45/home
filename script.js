@@ -1,3 +1,4 @@
+// THEME
 let theme = localStorage.getItem('theme')
 
 if(theme == null){
@@ -16,28 +17,6 @@ for (var i=0; themeDots.length > i; i++){
 		setTheme(mode)
 	})
 }
-
-/* Use async await..., I know... */
-document.getElementById('submit-btn').addEventListener('click', (e) => {
-    e.preventDefault();
-	btn = document.getElementById('submit-btn');
-	btn.setAttribute('disabled', '');
-	text = document.getElementById('submit-btn-text');
-	text.textContent = 'Sending...'
-	text.classList.toggle('hide');
-    btn.classList.toggle('hide');
-    setTimeout(() => {
-		text.style.display = 'none';
-		btn.classList.toggle('hide');
-		setTimeout(() => {
-			text.style.display = 'block';
-			text.textContent = 'Send';
-			text.classList.toggle('hide');
-			btn.removeAttribute('disabled');
-		}, 3000);
-    }, 2500);
-});
-
 
 function setTheme(mode){
 	if(mode == 'light'){
@@ -58,3 +37,71 @@ function setTheme(mode){
 
 	localStorage.setItem('theme', mode)
 }
+
+function delay(t) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, t);
+    });
+}
+
+// FORM
+let postForm = function(e) {
+	let form = document.getElementById('contact-form');
+	e.preventDefault();
+	const formData = new FormData(form);
+	const object = Object.fromEntries(formData);
+	const json = JSON.stringify(object); 
+	form.reset();
+	fetch('https://api.web3forms.com/submit', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'Accept': 'application/json'
+			},
+			body: json
+		})
+		.then(async (response) => {
+			await response;
+			console.log(response);
+		})
+		.catch(error => {
+			console.log(error);
+			result.innerHTML = "Something went wrong!";
+		})
+  };
+
+
+document.getElementById('submit-btn').addEventListener('click', (e) => {
+	postForm(e);
+	btn = document.getElementById('submit-btn');
+	btn.setAttribute('disabled', '');
+	text = document.getElementById('submit-btn-text');
+	text.textContent = 'Sending...'
+    // btn.classList.toggle('hide');
+	Promise.resolve()
+	.then(() => text.classList.toggle('hide'))
+	.then(() => delay(1500))
+	.then(() => text.classList.toggle('hide'))
+	.then(() => delay(1500))
+	.then(() => text.classList.toggle('hide'))
+	.then(() => delay(1500))
+	.then(() => {
+		text.style.fontSize = '200%';
+		text.style.position = 'relative';
+		text.style.bottom = '4px';
+		text.textContent = '✓';
+		text.classList.toggle('hide');
+	})
+	.then(() => delay(1500))
+	.then(() => text.classList.toggle('hide'))
+	.then(() => delay(2000))
+	.then(() => {
+		text.style.fontSize = null;
+		text.style.position = null;
+		text.style.bottom = null;
+		text.textContent = 'Send';
+		text.classList.toggle('hide');
+		btn.removeAttribute('disabled');
+	})
+});
+
