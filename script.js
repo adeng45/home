@@ -1,41 +1,38 @@
 // THEME
 let theme = localStorage.getItem('theme')
 
-if(theme == null){
-	setTheme('light')
-}else{
-	setTheme(theme)
+if (theme == null) {
+	setTheme('light');
+}
+else
+{
+	setTheme(theme);
 }
 
 let themeDots = document.getElementsByClassName('theme-dot')
 
-
-for (var i=0; themeDots.length > i; i++){
-	themeDots[i].addEventListener('click', function(){
+for (var i = 0; themeDots.length > i; i++) {
+	themeDots[i].addEventListener('click', function() {
 		let mode = this.dataset.mode
 		console.log('Option clicked:', mode)
 		setTheme(mode)
 	})
 }
 
-function setTheme(mode){
-	if(mode == 'light'){
-		document.getElementById('theme-style').href = './styles/default.css'
+function setTheme(mode) {
+	if(mode == 'light') {
+		document.getElementById('theme-style').href = 'default.css'
 	}
-
-	if(mode == 'blue'){
-		document.getElementById('theme-style').href = './styles/blue.css'
+	if(mode == 'blue') {
+		document.getElementById('theme-style').href = 'blue.css'
 	}
-
-	if(mode == 'green'){
-		document.getElementById('theme-style').href = './styles/green.css'
+	if(mode == 'green') {
+		document.getElementById('theme-style').href = 'green.css'
 	}
-
-	if(mode == 'purple'){
-		document.getElementById('theme-style').href = './styles/purple.css'
+	if(mode == 'purple') {
+		document.getElementById('theme-style').href = 'purple.css'
 	}
-
-	localStorage.setItem('theme', mode)
+	localStorage.setItem('theme', mode);
 }
 
 function delay(t) {
@@ -80,25 +77,19 @@ document.getElementById('submit-btn').addEventListener('click', (e) => {
     // btn.classList.toggle('hide');
 	Promise.resolve()
 	.then(() => text.classList.toggle('hide'))
-	.then(() => delay(1500))
+	.then(() => delay(1200))
 	.then(() => text.classList.toggle('hide'))
-	.then(() => delay(1500))
+	.then(() => delay(1200))
 	.then(() => text.classList.toggle('hide'))
-	.then(() => delay(1500))
+	.then(() => delay(1200))
 	.then(() => {
-		text.style.fontSize = '200%';
-		text.style.position = 'relative';
-		text.style.bottom = '4px';
-		text.textContent = '✓';
+		text.textContent = 'Sent!';
 		text.classList.toggle('hide');
 	})
-	.then(() => delay(1500))
-	.then(() => text.classList.toggle('hide'))
 	.then(() => delay(2000))
+	.then(() => text.classList.toggle('hide'))
+	.then(() => delay(1500))
 	.then(() => {
-		text.style.fontSize = null;
-		text.style.position = null;
-		text.style.bottom = null;
 		text.textContent = 'Send';
 		text.classList.toggle('hide');
 		btn.removeAttribute('disabled');
