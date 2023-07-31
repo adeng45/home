@@ -96,7 +96,6 @@ const minimaxAiLogic = ((percentage) => {
         // if the random number is smaller then the ais threshold, it findds the best move
         let choice = null;
         if (value <= aiPrecision) {
-            console.log('bestChoice');
             choice = minimax(gameBoard, gameController.getAiPlayer()).index
             const field = gameBoard.getField(choice);
             if (field != undefined) {
@@ -104,7 +103,6 @@ const minimaxAiLogic = ((percentage) => {
             }
         }
         else {
-            console.log('NotbestChoice');
             const emptyFieldsIdx = gameBoard.getEmptyFieldsIdx();
             let noBestMove = Math.floor(Math.random() * emptyFieldsIdx.length);
             choice = emptyFieldsIdx[noBestMove];
@@ -342,7 +340,6 @@ const gameController = (() => {
             }
         }
         else {
-            console.log('Already Filled')
         }
     }
 
@@ -361,10 +358,8 @@ const gameController = (() => {
 
         if (sign == "Draw") {
             winElements[3].classList.remove('hide');
-            console.log("Its a draw");
         }
         else {
-            console.log(`The winner is player ${sign}`);
             winElements[0].classList.remove('hide');
             if(sign.toLowerCase() == 'x'){
                 winElements[1].classList.remove('hide');
@@ -373,7 +368,6 @@ const gameController = (() => {
                 winElements[2].classList.remove('hide');
             }
         }
-        console.log('deactivate');
         displayController.deactivate();
         displayController.makeBodyRestart();
     }
@@ -414,8 +408,6 @@ const gameController = (() => {
         if (_humanPlayer.getSign() == 'O') {
             aiStep();
         }
-        console.log('restart');
-        console.log(minimaxAiLogic.getAiPercentage());
         displayController.activate();
 
    

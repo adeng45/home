@@ -2,7 +2,7 @@ body {
     font-size: 36px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .item {
@@ -10,8 +10,7 @@ body {
 }
 
 .board {
-    background-color: #12232E;
-    background-color: #553d67;
+    background-color: var(--mainColor);
     display: grid;
     grid-template-columns: 80px 80px 80px;
     grid-template-rows: 80px 80px 80px;
@@ -36,7 +35,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 54px;
-    background-color: #553d67;
+    background-color: var(--secondaryColor);
     color: #12232E;
     border: none;
     border-radius: 0px;
