@@ -13,4 +13,9 @@
 	--previewShadow:#111921;
 
 	--buttonColor:#17a2b8;
+
+	/* tic-tac-toe */
+    --winColor: white;
+	--gridLineColor: #203647;
+	--selectTextColor: #203647;
 }

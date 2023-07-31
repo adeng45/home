@@ -4,7 +4,7 @@ html, body{
 	scroll-behavior: smooth;
 }
 
-body *{
+body * {
 	transition: 0.3s;
 }
 
@@ -19,7 +19,7 @@ p, li, span, label, input, textarea{
 	font-family: 'Roboto Mono', monospace;
 }
 
-a{
+a {
 	text-decoration: none;
 	color:#17a2b8;
 }
@@ -423,13 +423,8 @@ h6 { font-size: 16px;}
 
 }
 
-iframe {
-	display: block;
-	width: 1000px;
-	height: 600px;
-	margin: auto;
-	padding: 20px 0;
-	border: none;
+.frame {
+	margin-bottom: 50px;
 }
 
 

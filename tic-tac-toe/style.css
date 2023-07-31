@@ -1,6 +1,6 @@
-body {
+#tic-tac-toe {
+    position: relative;
     font-size: 36px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-top: 50px;
 }
@@ -32,28 +32,30 @@ body {
 }
 
 .field {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 54px;
     background-color: var(--secondaryColor);
     color: #12232E;
     border: none;
     border-radius: 0px;
-    border-bottom: 3px solid #203647;
-    border-right: 3px solid #203647;
+    border-bottom: 3px solid var(--gridLineColor);
+    border-right: 3px solid var(--gridLineColor);
     outline: none;
 }
 
 .field.no-r {
     border-right: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .field.no-b {
     border-bottom: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .field p {
     margin: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .field:hover {
@@ -109,6 +111,7 @@ body {
     justify-content: center;
     align-items: space-around;
     margin: 0;
+    margin-top: 10px;
 }
 
 .rst {
@@ -130,11 +133,11 @@ select {
     outline: none;
     border: none;
     border-radius: 0px;
-    border-bottom: 2px solid #203647;
+    border-bottom: 2px solid var(--selectTextColor);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 14px;
-    color: #203647;
+    color: var(--selectTextColor);
 }
 
 select:hover {
@@ -144,14 +147,14 @@ select:hover {
 .win p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: white;
+    color: var(--winColor);
     z-index: 1;
     -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .winner {
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 25%;
     transform: translate(-50%, 0);
@@ -159,7 +162,7 @@ select:hover {
 }
 
 .sign {
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%, 0);
@@ -167,6 +170,6 @@ select:hover {
     margin: 0;
 }
 
-.hide{
+.hide {
     display: none;
 }

@@ -8,6 +8,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="default.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="white.css">
+
+	<!-- tic-tac-toe -->
+	<link rel="stylesheet" href="tic-tac-toe/style.css">
+    <link rel="stylesheet" href="tic-tac-toe/animation.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"rel="stylesheet">
+    <script defer src="tic-tac-toe/script.js"></script>
 </head>
 <body>
 
@@ -125,9 +132,54 @@
 
 
 	<section class="s1"> 
-		<iframe id="tic-tac-toe" src="./tic-tac-toe/index.html"></iframe>
-		<!-- <iframe src="./tic-tac-toe/index.html"></iframe>
-		<iframe src="./tic-tac-toe/index.html"></iframe> -->
+		
+		<div></div>
+		<div class="frame">
+
+			<div id="tic-tac-toe">
+
+				<div class="win">
+					<p class="winner hide">The winner is:</p>
+					<p class="x-text sign hide">X</p>
+					<p class="o-text sign hide">O</p>
+					<p class="winner draw hide">Draw</p>
+				</div>
+			
+				<div class="card">
+					<div class="item select">
+						<form action="" class="form">
+							<select name="levels" id="levels">
+								<option value="easy">Easy</option>
+								<option value="medium">Medium</option>
+								<option value="hard">Hard</option>
+								<option value="unbeatable">Unbeatable</option>
+							</select>
+						</form>
+					</div>
+					<div class="item player">
+						<button class="btn btn-p x">X</button>
+						<button class="btn btn-p o">O</button>
+					</div>
+					<div class="item board">
+						<button class="field"><p></p></button>
+						<button class="field"><p></p></button>
+						<button class="field no-r"><p></p></button>
+						<button class="field"><p></p></button>
+						<button class="field"><p></p></button>
+						<button class="field no-r"><p></p></button>
+						<button class="field no-b"><p></p></button>
+						<button class="field no-b"><p></p></button>
+						<button class="field no-b no-r"><p></p></button>
+					</div>
+					<div class="item rst">
+						<button class="btn restart">Restart</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div></div>
+		
 	</section>
 
 	<section class="s1">

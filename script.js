@@ -19,25 +19,17 @@ for (var i = 0; themeDots.length > i; i++) {
 }
 
 function setTheme(mode) {
-	debugger;
-	let tic_tac_toe = document.getElementById('tic-tac-toe');
-	// let solitaire = document.getElementById('solitaire');
-	// let calculator = document.getElementById('calculator');
 	if (mode == 'light') {
 		document.getElementById('theme-style').href = 'white.css';
-		tic_tac_toe.contentWindow.document.getElementById('theme-style').href = '../white.css';
 	}
 	else if (mode == 'blue') {
 		document.getElementById('theme-style').href = 'blue.css';
-		tic_tac_toe.contentWindow.document.getElementById('theme-style').href = '../blue.css';
 	}
 	else if (mode == 'green') {
 		document.getElementById('theme-style').href = 'green.css';
-		tic_tac_toe.contentWindow.document.getElementById('theme-style').href = '../green.css';
 	}
 	else if (mode == 'purple') {
 		document.getElementById('theme-style').href = 'purple.css';
-		tic_tac_toe.contentWindow.document.getElementById('theme-style').href = '../purple.css';
 	}
 	localStorage.setItem('theme', mode);
 }
