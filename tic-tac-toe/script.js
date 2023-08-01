@@ -350,7 +350,7 @@ const gameController = (() => {
      */
     const endGame = function(sign){
 
-        const card = document.querySelector('.card');
+        const card = document.querySelector('.tcard');
         card.classList.remove('unblur');
         card.classList.add('blur');
 
@@ -398,7 +398,7 @@ const gameController = (() => {
      */
     const restart = async function () {
 
-        const card = document.querySelector('.card');
+        const card = document.querySelector('.tcard');
         const winElements = document.querySelectorAll('.win p');
 
         card.classList.add('unblur');

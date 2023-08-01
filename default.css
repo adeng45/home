@@ -423,8 +423,17 @@ h6 { font-size: 16px;}
 
 }
 
-.frame {
-	margin-bottom: 50px;
+.frames {
+	position: relative;
+	width: 100%;
+	height: 650px;
 }
+
+.frame1, .frame2 {
+	position: absolute;
+	width: 100%;
+}
+
+
 
 

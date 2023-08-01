@@ -15,6 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"rel="stylesheet">
     <script defer src="tic-tac-toe/script.js"></script>
+
+	<!-- solitaire -->
+	<link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="solitaire/css/cardstarter.css">
+    <link rel="stylesheet" href="solitaire/css/main.css">
+    <script defer src="solitaire/script.js"></script>
 </head>
 <body>
 
@@ -134,49 +140,88 @@
 	<section class="s1"> 
 		
 		<div></div>
-		<div class="frame">
+		
+		<div class="frames">
+			<div class="frame1">
 
-			<div id="tic-tac-toe">
+				<div id="tic-tac-toe">
 
-				<div class="win">
-					<p class="winner hide">The winner is:</p>
-					<p class="x-text sign hide">X</p>
-					<p class="o-text sign hide">O</p>
-					<p class="winner draw hide">Draw</p>
+					<div class="win">
+						<p class="winner hide">The winner is:</p>
+						<p class="x-text sign hide">X</p>
+						<p class="o-text sign hide">O</p>
+						<p class="winner draw hide">Draw</p>
+					</div>
+				
+					<div class="tcard">
+						<div class="item select">
+							<form action="" class="form">
+								<select name="levels" id="levels">
+									<option value="easy">Easy</option>
+									<option value="medium">Medium</option>
+									<option value="hard">Hard</option>
+									<option value="unbeatable">Unbeatable</option>
+								</select>
+							</form>
+						</div>
+						<div class="item player">
+							<button class="btn btn-p x">X</button>
+							<button class="btn btn-p o">O</button>
+						</div>
+						<div class="item board">
+							<button class="field"><p></p></button>
+							<button class="field"><p></p></button>
+							<button class="field no-r"><p></p></button>
+							<button class="field"><p></p></button>
+							<button class="field"><p></p></button>
+							<button class="field no-r"><p></p></button>
+							<button class="field no-b"><p></p></button>
+							<button class="field no-b"><p></p></button>
+							<button class="field no-b no-r"><p></p></button>
+						</div>
+						<div class="item rst">
+							<button class="btn restart">Restart</button>
+						</div>
+					</div>
 				</div>
-			
-				<div class="card">
-					<div class="item select">
-						<form action="" class="form">
-							<select name="levels" id="levels">
-								<option value="easy">Easy</option>
-								<option value="medium">Medium</option>
-								<option value="hard">Hard</option>
-								<option value="unbeatable">Unbeatable</option>
-							</select>
-						</form>
-					</div>
-					<div class="item player">
-						<button class="btn btn-p x">X</button>
-						<button class="btn btn-p o">O</button>
-					</div>
-					<div class="item board">
-						<button class="field"><p></p></button>
-						<button class="field"><p></p></button>
-						<button class="field no-r"><p></p></button>
-						<button class="field"><p></p></button>
-						<button class="field"><p></p></button>
-						<button class="field no-r"><p></p></button>
-						<button class="field no-b"><p></p></button>
-						<button class="field no-b"><p></p></button>
-						<button class="field no-b no-r"><p></p></button>
-					</div>
-					<div class="item rst">
-						<button class="btn restart">Restart</button>
-					</div>
-				</div>
+				
 			</div>
-			
+
+			<div class="frame2">
+				<div class="solitaire">
+					<h1>Solitiare</h1>
+					<section id="game-board">
+						<section id="topRow">
+							<div id="pile" class="card outline"></div>
+							<div id="draw" class="card outline"></div>
+							<div id="ace1" class="card outline"></div>
+							<div id="ace2" class="card outline"></div>
+							<div id="ace3" class="card outline"></div>
+							<div id="ace4" class="card outline"></div>
+						</section>
+						<section id="bottomRow">
+							<div id="stack1" class="card outline"></div>
+							<div id="stack2" class="card outline"></div>
+							<div id="stack3" class="card outline"></div>
+							<div id="stack4" class="card outline"></div>
+							<div id="stack5" class="card outline"></div>
+							<div id="stack6" class="card outline"></div>
+							<div id="stack7" class="card outline"></div>
+						</section>
+					</section>
+					<footer>
+						<div id="score">score - 0</div>
+						<div id="timer"></div>
+						<button id="resetButton">New Game</button>
+					</footer>
+				</body>
+			</div>
+		</div>
+
+		<div class="frame3">
+			<div class="calculator">
+
+			</div>
 		</div>
 		<div></div>
 		

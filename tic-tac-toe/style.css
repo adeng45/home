@@ -1,8 +1,10 @@
 #tic-tac-toe {
     position: relative;
+    width: 80%;
     font-size: 36px;
     font-weight: 700;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 75px;
 }
 
 .item {
@@ -20,7 +22,7 @@
     justify-content: center;
 }
 
-.card {
+.tcard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +158,7 @@ select:hover {
 .winner {
     position: absolute;
     left: 50%;
-    top: 25%;
+    top: 15%;
     transform: translate(-50%, 0);
     font-size: 35px;
 }
@@ -164,7 +166,7 @@ select:hover {
 .sign {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 30%;
     transform: translate(-50%, 0);
     font-size: 150px;
     margin: 0;
