@@ -484,7 +484,7 @@ const displayController = (() => {
     }
 
     const makeBodyRestart = () =>{
-        const body = document.querySelector('body');
+        const body = document.querySelector('#tic-tac-toe');
         body.addEventListener('click', gameController.restart);
         
     }

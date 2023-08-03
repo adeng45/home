@@ -429,9 +429,10 @@ h6 { font-size: 16px;}
 	height: 650px;
 }
 
-.frame1, .frame2 {
+.frame1, .frame2, .frame3 {
 	position: absolute;
 	width: 100%;
+	height: inherit;
 }
 
 

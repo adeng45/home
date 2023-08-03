@@ -1,20 +1,20 @@
-.solitaire > *, .solitaire >*::before, .solitaire>*::after {
+#solitaire > *, #solitaire >*::before, #solitaire>*::after {
     box-sizing: border-box;
 }
 
-.solitaire {
-    margin: 0;
+#solitaire {
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     font-family: 'Grenze', serif;
-    height: 100vh;
+    height: inherit;
     background: radial-gradient(#409c2b, #385e2c);
     font-size: 1.5vw;
 }
 
-.solitaire > h1 {
+#solitaire > h1 {
     color: lightgrey;
     margin: 0;
     font-size: 3.5vw;

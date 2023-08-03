@@ -1,76 +1,94 @@
+let displayVal = '0';
+let exp = '0';
+let display = document.querySelector('#display > .no-overflow > span');
+
 const operators = ['+', '-', '*', '÷', '^', '%', '.'];
 
+const setDisplay = (val) => {
+    displayVal = val;
+    display.textContent = displayVal;
+}
 
+const setExp = (val) => {
+    exp = val;
+}
 
-//Delete values.
+// Delete values.
 const del = (clearAll) => {
-    if (display === '') {
+    if (displayVal === '') {
         return;
     }
 
-    if (display === 'Infinity' || clearAll || display.length === 1) {
-        setExp('0');
+    if (displayVal === 'Infinity' || displayVal === 'NaN' || clearAll || displayVal.length === 1) {
         setDisplay('0');
+        setExp('0');
         return;
     }
 
+    setDisplay(displayVal.slice(0, -1));
     setExp(exp.slice(0, -1));
-    setDisplay(display.slice(0, -1));
 }
 
 // Evaluate expression.
 const evaluate = () => {
-let value = eval(exp).toString();
-setExp(value);
-setDisplay(value);
+    let value = eval(exp).toString();
+    setDisplay(value);
+    setExp(value);
 }
 
-//Generates the middle 3 rows.
-const generate = () => {
-
-const buttons = [];
-
-for (let i = 0; i < 3; i++) {
-    buttons.push(
-    <button className='op' onClick={() => update(operators[i])}>{operators[i]}</button>
-    )
-    for (let j = 1; j < 4; j++) {
-    buttons.push(
-        <button className='digit' onClick={() => update((3 * i + j).toString())}>{3 * i + j}</button>
-    )
-    }
-}
-
-return buttons;
-}
 
 const update = (value) => {
 
-//Don't want to start off with an operator.
-if (display === '' && operators.includes(value))  {
-    return;
-}
+    //Don't want to start off with an operator.
+    if (displayVal === '' && operators.includes(value))  {
+        return;
+    }
 
-//No consecutive operators.
-if (operators.includes(value) && operators.includes(display.slice(-1))) {
-    return;
-}
+    //No consecutive operators.
+    if (operators.includes(value) && operators.includes(displayVal.slice(-1))) {
+        return;
+    }
 
-//Special case of '÷'
-if (value === '÷') {
+    //Special case of '÷'
+    if (value === '÷') {
+        setDisplay(displayVal + value);
+        setExp(exp + '/');
+        return;
+    }
 
-    setExp(exp + '/');
-    setDisplay(display + value);
-    return;
-}
+    //Leading 0
+    if (displayVal === '0' && !operators.includes(value)) {
+        setDisplay(value);
+        setExp(value);
+        return;
+    }
 
-//Leading 0
-if (display === '0' && !operators.includes(value)) {
-    setExp(value);
-    setDisplay(value);
-    return;
-}
-
+    setDisplay(displayVal + value);
     setExp(exp + value);
-    setDisplay(display + value);
+
 }
+
+document.querySelectorAll('.buttons > button').forEach((button) => {
+    let func;
+    if (button.textContent === 'C') {
+        func = () => {
+            del(true);
+        }
+    }
+    else if (button.textContent === 'DEL') {
+        func = () => {
+            del(false);
+        }
+    }
+    else if (button.textContent === '=') {
+        func = () => {
+            evaluate();
+        }
+    }
+    else {
+        func = () => {
+            update(button.textContent);
+        }
+    }
+    button.addEventListener('click', func);
+})

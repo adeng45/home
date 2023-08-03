@@ -1,0 +1,90 @@
+.calculator > * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #FFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+#display {
+    height: 38px;
+    padding: 2vh 1vw;
+    text-align: right;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    box-sizing: content-box;
+}
+
+#display > .no-overflow {
+    overflow: hidden;
+}
+
+#display span { 
+    padding: 0 15px;
+    color: white;
+    float: right;
+}
+
+.buttons > button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+    flex: 1 1 25%;
+    font-family: inherit;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 25%;
+}
+
+
+.sop {
+    background-color: rgb(28, 219, 28);
+}
+
+.op {
+    background-color: rgb(233, 165, 40);
+}
+
+.digit {
+    background-color: rgb(185, 185, 185);
+}
+
+.buttons > button:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.5em);
+}
+
+.buttons > button:active {
+    transform: scale(1.01);
+    filter: brightness(70%);
+    transition: background-color 0.3s;
+}
+
+.buttons:last-child {
+    border-bottom-left-radius: 16px;
+}
+
+
+
+
+

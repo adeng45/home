@@ -27,7 +27,7 @@ const timerEl = document.getElementById('timer');
 const scoreEl = document.getElementById('score');
 
 // EVENTS
-document.querySelector('body').addEventListener('click', handleClick);
+document.querySelector('#solitaire').addEventListener('click', handleClick);
 
 // BEGIN
 init();
