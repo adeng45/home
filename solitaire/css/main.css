@@ -3,15 +3,19 @@
 }
 
 #solitaire {
-    margin: auto;
+    /* height: inherit; */
+    width: 100%;
+    min-width: 360px;
+    padding: 2vw;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     font-family: 'Grenze', serif;
-    height: inherit;
     background: radial-gradient(#409c2b, #385e2c);
     font-size: 1.5vw;
+    overflow: auto;
 }
 
 #solitaire > h1 {

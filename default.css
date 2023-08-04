@@ -426,15 +426,56 @@ h6 { font-size: 16px;}
 .frames {
 	position: relative;
 	width: 100%;
-	height: 650px;
+	height: 50vw;
+}
+
+.frames > * {
+	transition: 0;
 }
 
 .frame1, .frame2, .frame3 {
-	position: absolute;
-	width: 100%;
 	height: inherit;
+	max-height: inherit;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
 }
 
+.frame1 {
+	background-color: var(--mainColor);
+}
+
+.frame2 {
+	align-items: normal;
+}
+
+.frame3 {
+	background-color: white;
+	overflow: auto;
+	background-color: var(--mainColor);
+}
+
+.widgets {
+	display: flex;
+	flex-direction: row;
+}
+
+.left, .right {
+	font-size: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 100px;
+}
+
+.left:hover, .right:hover {
+	background-color: var(--secondaryColor);
+	cursor: pointer;
+}
 
 
 

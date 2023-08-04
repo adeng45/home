@@ -62,7 +62,7 @@ let postForm = function(e) {
 		})
 		.catch(error => {
 			console.log(error);
-			result.innerHTML = "Something went wrong!";
+			result.innerHTML = 'Something went wrong!';
 		})
   };
 
@@ -95,3 +95,35 @@ document.getElementById('submit-btn').addEventListener('click', (e) => {
 	})
 });
 
+// FRAME SWITCHING
+let tic_tac_toe = document.querySelector('.frame1');
+let solitaire = document.querySelector('.frame2');
+let calculator = document.querySelector('.frame3');
+const frames = [tic_tac_toe, solitaire, calculator];
+let shownFrame = 0;
+
+function show(frame) {
+	frames[frame].style.display = 'flex';
+	frames[(frame + 1) % 3].style.display = 'none';
+	frames[(frame + 2) % 3].style.display = 'none';
+}
+
+document.querySelector('.left').addEventListener('click', (e) => {
+	e.target.style.pointerEvents = 'none';
+	shownFrame = (shownFrame + 1) % 3;
+	show(shownFrame);
+	setTimeout(() => {
+		e.target.style.pointerEvents = null;
+	}, 1000);
+})
+
+document.querySelector('.right').addEventListener('click', (e) => {
+	e.target.style.pointerEvents = 'none';
+	shownFrame = shownFrame === 0 ? 2 : shownFrame - 1;
+	show(shownFrame);
+	setTimeout(() => {
+		e.target.style.pointerEvents = null;
+	}, 1000);
+})
+
+show(shownFrame);
