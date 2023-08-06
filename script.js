@@ -123,7 +123,7 @@ document.querySelector('.right').addEventListener('click', (e) => {
 	show(shownFrame);
 	setTimeout(() => {
 		e.target.style.pointerEvents = null;
-	}, 1000);
+	}, 500);
 })
 
 show(shownFrame);

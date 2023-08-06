@@ -18,4 +18,12 @@
 	--winColor: black;
 	--gridLineColor: white;
 	--selectTextColor: #515a48;
+
+	/* solitaire */
+	--resetButtonColor: none;
+	--gameBoardColor: none;
+	--gameBoardBorderColor: white;
+	--footerDataTextColor: lightgrey;
+	--resetButtonHoverColor: white;
+	--resetButtonHoverTextColor: #606B56;
 }

@@ -7,13 +7,13 @@
     width: 100%;
     min-width: 360px;
     padding: 2vw;
-    padding-top: 0;
+    padding-top: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     font-family: 'Grenze', serif;
-    background: radial-gradient(#409c2b, #385e2c);
+    background: var(--gameBoardColor);
     font-size: 1.5vw;
     overflow: auto;
 }
@@ -32,9 +32,9 @@
     display: flex;
     flex-direction: column;
     align-items: stretch center;
-    border: 2px solid rgba(167, 201, 164, 0.6);
+    border: 1px solid var(--gameBoardBorderColor);
     border-radius: 5px;    
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 0;
 }
 
 #game-board section div {
@@ -57,28 +57,34 @@
 footer {
     display: flex; 
     justify-content: left;
-    margin: 1vh 0 auto 0;
+    margin: 1.3svw 0 auto 0;
     width: 48vw;
 }
 
 #timer {
     margin-right: auto;
-    color: lightgrey;
+    color: var(--footerDataTextColor);
 }
 
 #score {
     margin-right: 3vw;
-    color: lightgrey;
+    color: var(--footerDataTextColor);
 }
 
 #resetButton {
     font-size: 1.6vw;
-    background: #629736;
+    background: var(--resetButtonColor);
     width: 10vw;
-    border: solid 1px lightgrey;
+    border: solid 1px var(--footerDataTextColor);
     border-radius: 2px;
-    color: lightgrey;
+    color: var(--footerDataTextColor);
     font-family: 'Grenze', serif;
+}
+
+#resetButton:hover {
+    cursor: pointer;
+    background-color: var(--resetButtonHoverColor);
+    color: var(--resetButtonHoverTextColor);
 }
 
 .highlight {

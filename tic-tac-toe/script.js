@@ -416,7 +416,8 @@ const gameController = (() => {
         winElements.forEach(element => {
             element.classList.add('hide');
         });
-        document.body.removeEventListener('click', gameController.restart);
+        const body = document.querySelector('#tic-tac-toe');
+        body.removeEventListener('click', gameController.restart);
 
     }
 
