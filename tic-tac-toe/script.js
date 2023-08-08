@@ -356,11 +356,11 @@ const gameController = (() => {
 
         const winElements = document.querySelectorAll('.win p')
 
+        winElements[0].classList.remove('hide');
         if (sign == "Draw") {
             winElements[3].classList.remove('hide');
         }
         else {
-            winElements[0].classList.remove('hide');
             if(sign.toLowerCase() == 'x'){
                 winElements[1].classList.remove('hide');
             }

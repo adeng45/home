@@ -79,6 +79,7 @@ footer {
     border-radius: 2px;
     color: var(--footerDataTextColor);
     font-family: 'Grenze', serif;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 #resetButton:hover {

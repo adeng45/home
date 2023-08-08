@@ -41,9 +41,7 @@ function delay(t) {
 }
 
 // FORM
-let postForm = function(e) {
-	let form = document.getElementById('contact-form');
-	e.preventDefault();
+let postForm = function(form) {
 	const formData = new FormData(form);
 	const object = Object.fromEntries(formData);
 	const json = JSON.stringify(object); 
@@ -67,33 +65,52 @@ let postForm = function(e) {
   };
 
 
-document.getElementById('submit-btn').addEventListener('click', (e) => {
-	postForm(e);
+  document.getElementById('submit-btn').addEventListener('click', (e) => {
+	e.preventDefault();
+	let form = document.getElementById('contact-form');
+	if (!form.checkValidity()) { 
+		focusInvalid(form);
+		return;
+	 }
+	postForm(form);
 	btn = document.getElementById('submit-btn');
 	btn.setAttribute('disabled', '');
 	text = document.getElementById('submit-btn-text');
 	text.textContent = 'Sending...'
-    // btn.classList.toggle('hide');
 	Promise.resolve()
-	.then(() => text.classList.toggle('hide'))
+	.then(() => text.classList.toggle('text-hide'))
 	.then(() => delay(1200))
-	.then(() => text.classList.toggle('hide'))
+	.then(() => text.classList.toggle('text-hide'))
 	.then(() => delay(1200))
-	.then(() => text.classList.toggle('hide'))
+	.then(() => text.classList.toggle('text-hide'))
 	.then(() => delay(1200))
 	.then(() => {
 		text.textContent = 'Sent!';
-		text.classList.toggle('hide');
+		text.classList.toggle('text-hide');
 	})
 	.then(() => delay(2000))
-	.then(() => text.classList.toggle('hide'))
+	.then(() => text.classList.toggle('text-hide'))
 	.then(() => delay(1500))
 	.then(() => {
 		text.textContent = 'Send';
-		text.classList.toggle('hide');
+		text.classList.toggle('text-hide');
 		btn.removeAttribute('disabled');
 	})
 });
+
+const focusInvalid = (form) => {
+	let inputs = form.elements;
+	for (let i = 0; i < inputs.length; i++) {
+		let input = inputs[i];
+		console.log(input);
+		console.log(input.classList.contains('input-field'));
+		if (input.classList && input.classList.contains('input-field') && !input.checkValidity()) {
+			input.focus();
+			return;
+		}
+	}
+}
+
 
 // FRAME SWITCHING
 let tic_tac_toe = document.querySelector('.frame1');
@@ -114,7 +131,7 @@ document.querySelector('.left').addEventListener('click', (e) => {
 	show(shownFrame);
 	setTimeout(() => {
 		e.target.style.pointerEvents = null;
-	}, 1000);
+	}, 100);
 })
 
 document.querySelector('.right').addEventListener('click', (e) => {
@@ -123,7 +140,7 @@ document.querySelector('.right').addEventListener('click', (e) => {
 	show(shownFrame);
 	setTimeout(() => {
 		e.target.style.pointerEvents = null;
-	}, 500);
+	}, 100);
 })
 
 show(shownFrame);
