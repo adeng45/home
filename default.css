@@ -286,11 +286,11 @@ h6 { font-size: 16px;}
 	gap:100px;
 }
 
-#skills{
+/* #skills{
 	display: flex;
 	justify-content: space-evenly;
 	background-color: var(--previewShadow);
-}
+} */
 
 .social-links{
 	display: grid;
@@ -300,6 +300,47 @@ h6 { font-size: 16px;}
 
 #social_img{
 	width: 100%;
+}
+
+/* SKILLS */
+#skills > h4 {
+	color: var(--s1textColor);
+	text-align: center;
+}
+
+.skills-wrapper {
+	margin-left: 11.5%;
+	width: 80%;
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	row-gap: 30px;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.languages, .dev-tools, .misc {
+	display: flex;
+	justify-content: center;
+}
+
+.skills-header {
+	color: var(--s1headerTextColor);
+}
+
+.skill {
+	color: var(--s1textColor);
+}
+
+.skill > img {
+	position: relative;
+	top: 10px;
+}
+
+.logo {
+	height: 30px;
+	width: 30px;
+	padding-right: 5px;
 }
 
 /* WIDGETS */
@@ -497,11 +538,28 @@ h6 { font-size: 16px;}
 
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 570px) {
 	#navigation > .nav-about {
 		display: none;
 	}
 }
+
+@media screen and (max-width: 540px) {
+
+	.languages, .dev-tools, .misc {
+		text-align: center;
+	}
+
+	.languages li, .dev-tools li, .misc li {
+		text-align: justify;
+	}
+
+	.skills-wrapper {
+		margin: 10%;
+	}
+	
+}
+
 
 @media screen and (max-width: 500px){
 	#navigation > .nav-contact {

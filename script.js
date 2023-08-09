@@ -20,16 +20,16 @@ for (var i = 0; themeDots.length > i; i++) {
 
 function setTheme(mode) {
 	if (mode == 'light') {
-		document.getElementById('theme-style').href = 'white.css';
+		document.getElementById('theme-style').href = 'themes/white.css';
 	}
 	else if (mode == 'blue') {
-		document.getElementById('theme-style').href = 'blue.css';
+		document.getElementById('theme-style').href = 'themes/blue.css';
 	}
 	else if (mode == 'green') {
-		document.getElementById('theme-style').href = 'green.css';
+		document.getElementById('theme-style').href = 'themes/green.css';
 	}
 	else if (mode == 'purple') {
-		document.getElementById('theme-style').href = 'purple.css';
+		document.getElementById('theme-style').href = 'themes/purple.css';
 	}
 	localStorage.setItem('theme', mode);
 }
