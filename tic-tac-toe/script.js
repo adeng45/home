@@ -520,16 +520,9 @@ const displayController = (() => {
 gameController.changeSign('X');
 
 window.addEventListener("resize", (e) => {
-    let scrollHeight = document.getElementById('tic-tac-toe').scrollHeight;
     let width = window.innerWidth;
     let winText = document.querySelector('.winner.text');
     let sign = document.querySelector('.winner.sign');
-    // winText.style.top = `${scrollHeight * 0.15}px`;
-    // if (window.innerWidth > 600) {
-    //     sign.style.top = `${scrollHeight * 0.3}px`;
-    // } else {
-    //     sign.style.top = `${scrollHeight * 0.50}px`;
-    // }
     winText.style.top = `clamp(15%, ${(1200/width) * 15}%, 30%)`;
-    sign.style.top = `clamp(30%, ${(1200/width) * 30}%, 80%)`;
+    sign.style.top = `clamp(30%, ${(1200/width) * 30}%, 75%)`;
 });
