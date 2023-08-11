@@ -110,10 +110,8 @@
 						<div id="tic-tac-toe">
 
 							<div class="win">
-								<p class="winner hide">The winner is:</p>
-								<p class="x-text sign hide">X</p>
-								<p class="o-text sign hide">O</p>
-								<p class="winner sign hide">Draw</p>
+								<p class="winner hide text">The winner is:</p>
+								<p class="winner sign hide">None</p>
 							</div>
 						
 							<div class="tcard">
@@ -150,7 +148,7 @@
 						
 					</div>
 
-					<div class="frame2">
+					<div class="frame3">
 						<div id="solitaire">
 							<section id="game-board">
 								<section id="topRow">
@@ -179,7 +177,7 @@
 						</div>
 					</div> 
 
-					<div class="frame3">
+					<div class="frame2">
 						<div class="calculator">
 							<div id="display">
 								<div class="no-overflow"><span>0</span></div>
@@ -268,83 +266,108 @@
 	</section>
 
 
-	<section class="s2 skill">
+	<section class="s1 skill">
 				
-		<div id="skills">
+		<div class="main-container wrapper">
 
-			<div class="skills-wrapper">
-				<div class="languages">
-					<div>
-						<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Languages</u>
-						<ul>
-							<li class="skill"><img src="images/javascript-logo-svgrepo-com.svg" class="logo">JavaScript</li>
-							<li class="skill"><img src="images/python-logo-only.svg" class="logo">Python</li>
-							<li class="skill"><img src="images/c-logo-only.svg" class="logo">C</li>
-							<li class="skill"><img src="images/java-logo-only.svg" class="logo">Java</li>
-							<li class="skill"><img src="images/rust-logo-only.svg" class="logo">Rust</li>
-						</ul>
-					</div>
+			<div class="nav-wrapper">
+
+				<div class="dots-wrapper">
+					<div class="dot-1 browser-dot"></div>
+					<div class="dot-2 browser-dot"></div>
+					<div class="dot-3 browser-dot"></div>
 				</div>
-				<div class="dev-tools">
-					<div>
-						<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Developer Tools</u>
-						<ul>
-							<li class="skill"><img src="images/html-logo-only.svg" class="logo">HTML</li>
-							<li class="skill"><img src="images/css-logo-only.svg" class="logo">CSS</li>
-							<li class="skill"><img src="images/react-logo-only.svg" class="logo">ReactJS</li>
-							<li class="skill"><img src="images/node-logo-only.svg" class="logo">NodeJS</li>
-							<li class="skill"><img src="images/mongodb-logo-only.svg" class="logo">SQL - MongoDB</li>
-							<li class="skill"><img src="images/express-logo.svg" class="logo">ExpressJS</li>
-						</ul>
-					</div>
-				</div>
-				<div class="misc">
-					<div>
-						<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Other/Misc</u>
-						<ul>
-							<li class="skill"><img src="images/check.svg" class="logo">pandas</li>
-							<li class="skill"><img src="images/check.svg" class="logo">numpy</li>
-							<li class="skill"><img src="images/check.svg" class="logo">Jira</li>
-							<li class="skill"><img src="images/check.svg" class="logo">Confluence</li>
-							<li class="skill"><img src="images/check.svg" class="logo">Jest</li>
-						</ul>
-					</div>
-				</div>
+				
 			</div>
 
+			<div id="skills">
+
+				<div class="skills-wrapper">
+					<div class="languages">
+						<div>
+							<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Languages</u>
+							<ul>
+								<li class="skill"><img src="images/javascript-logo-svgrepo-com.svg" class="logo">JavaScript</li>
+								<li class="skill"><img src="images/python-logo-only.svg" class="logo">Python</li>
+								<li class="skill"><img src="images/c-logo-only.svg" class="logo">C</li>
+								<li class="skill"><img src="images/java-logo-only.svg" class="logo">Java</li>
+								<li class="skill"><img src="images/rust-logo-only.svg" class="logo">Rust</li>
+							</ul>
+						</div>
+					</div>
+					<div class="dev-tools">
+						<div>
+							<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Developer Tools</u>
+							<ul>
+								<li class="skill"><img src="images/html-logo-only.svg" class="logo">HTML</li>
+								<li class="skill"><img src="images/css-logo-only.svg" class="logo">CSS</li>
+								<li class="skill"><img src="images/react-logo-only.svg" class="logo">ReactJS</li>
+								<li class="skill"><img src="images/node-logo-only.svg" class="logo">NodeJS</li>
+								<li class="skill"><img src="images/mongodb-logo-only.svg" class="logo">SQL - MongoDB</li>
+								<li class="skill"><img src="images/express-logo.svg" class="logo">ExpressJS</li>
+							</ul>
+						</div>
+					</div>
+					<div class="misc">
+						<div>
+							<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Other/Misc</u>
+							<ul>
+								<li class="skill"><img src="images/check.svg" class="logo">pandas</li>
+								<li class="skill"><img src="images/check.svg" class="logo">numpy</li>
+								<li class="skill"><img src="images/check.svg" class="logo">Jira</li>
+								<li class="skill"><img src="images/check.svg" class="logo">Confluence</li>
+								<li class="skill"><img src="images/check.svg" class="logo">Jest</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</div>
 		
 	</section>
 
 	<section class="s1" id="contact">
 
-		<h3 style="text-align: center;">Contact</h3>
-		<form id="contact-form">
-			
-			<input type="hidden" name="access_key" value="891ed976-b4f7-4f94-96cd-382191dfcfc1">
+		<div class="main-container wrapper">
 
-			<div class="input-container">
-				<label for="name">Name:</label>
-				<input class="input-field" id="name" type="text" name="name" required="required">
+			<div class="nav-wrapper">
+
+				<div class="dots-wrapper">
+					<div class="dot-1 browser-dot"></div>
+					<div class="dot-2 browser-dot"></div>
+					<div class="dot-3 browser-dot"></div>
+				</div>
+				
 			</div>
 
-			<div class="input-container">
-				<label for="subject">Subject:</label>
-				<input class="input-field" id="subject" type="text" name="subject" required="required">
-			</div>
+			<form id="contact-form">
+				
+				<input type="hidden" name="access_key" value="891ed976-b4f7-4f94-96cd-382191dfcfc1">
 
-			<div class="input-container">
-				<label for="email">Email:</label>
-				<input class="input-field" id="email" type="email" name="email" required="required">
-			</div>
+				<div class="input-container">
+					<label for="name">Name:</label>
+					<input class="input-field" id="name" type="text" name="name" required="required">
+				</div>
 
-			<div class="input-container">
-				<label for="message">Message:</label>
-				<textarea class="input-field" id="message" name="message" required="required"></textarea>
-			</div>
+				<div class="input-container">
+					<label for="subject">Subject:</label>
+					<input class="input-field" id="subject" type="text" name="subject" required="required">
+				</div>
 
-			<button type="submit" id="submit-btn"><div id="submit-btn-text">Send</div></button>
-		</form>
+				<div class="input-container">
+					<label for="email">Email:</label>
+					<input class="input-field" id="email" type="email" name="email" required="required">
+				</div>
+
+				<div class="input-container">
+					<label for="message">Message:</label>
+					<textarea class="input-field" id="message" name="message" required="required"></textarea>
+				</div>
+
+				<button type="submit" id="submit-btn"><div id="submit-btn-text">Send</div></button>
+			</form>
+		</div>
 	</section> 
 
 	<script defer type="text/javascript" src="script.js"></script>

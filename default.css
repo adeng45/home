@@ -41,6 +41,7 @@ h6 { font-size: 16px;}
 	background-color: var(--mainColor);
 	/* border-bottom:1px solid var(--borderColor); */
 	overflow:auto;
+	padding-bottom: 50px;
 }
 
 .s2{
@@ -75,10 +76,6 @@ h6 { font-size: 16px;}
 }
 
 /* INTRO */
-.intro {
-	padding-bottom: 50px;
-}
-
 .greeting-wrapper{
 	display: grid;
 	text-align: center;
@@ -361,7 +358,6 @@ h6 { font-size: 16px;}
 /* WIDGETS */
 .widgets {
 	background-color: var(--mainColor);
-	padding-bottom: 50px;
 }
 
 .frames {
@@ -391,11 +387,11 @@ h6 { font-size: 16px;}
 }
 
 .frame2 {
-	align-items: normal;
+	overflow: auto;
 }
 
 .frame3 {
-	overflow: auto;
+	align-items: normal;
 }
 
 .widgets-wrapper {
@@ -423,12 +419,11 @@ h6 { font-size: 16px;}
 #contact-form {
 	max-width: 600px;
 	height: auto;
-	margin: 0 auto;
+	margin: 50px auto;
 	border: 1px solid var(--borderColor);
 	padding: 15px;
 	/* border-radius: 5px; */
 	background-color: var(--mainColor);
-	margin-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -458,6 +453,7 @@ h6 { font-size: 16px;}
 	background-color: var(--secondaryColor);
 	border:1px solid var(--borderColor);
 	font-size: 14px;
+	border-radius: 5px;
 }
 
 #submit-btn {
@@ -494,10 +490,6 @@ h6 { font-size: 16px;}
 }
 
 /* PROJECTS */
-.projects {
-	padding-bottom: 50px;
-}
-
 .post-wrapper{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 320px);

@@ -325,7 +325,7 @@ const gameController = (() => {
             else if (checkForDraw(gameBoard)) {
                 (async () => {
                     await _sleep(500 + (Math.random() * 500));
-                    endGame("Draw");
+                    endGame("None");
                 })();  
             }
             else {
@@ -354,18 +354,21 @@ const gameController = (() => {
         card.classList.remove('unblur');
         card.classList.add('blur');
 
-        const winElements = document.querySelectorAll('.win p')
+        const winElements = document.querySelectorAll('.winner');
 
         winElements[0].classList.remove('hide');
         if (sign == "Draw") {
-            winElements[3].classList.remove('hide');
+            winElements[1].innerText = 'Draw';
+            winElements[1].classList.remove('hide');
         }
         else {
             if(sign.toLowerCase() == 'x'){
+                winElements[1].innerText = 'X';
                 winElements[1].classList.remove('hide');
             }
             else{
-                winElements[2].classList.remove('hide');
+                winElements[1].innerText = 'O';
+                winElements[1].classList.remove('hide');
             }
         }
         displayController.deactivate();
@@ -514,4 +517,19 @@ const displayController = (() => {
 })();
 
 // START!
-gameController.changeSign('X')
+gameController.changeSign('X');
+
+window.addEventListener("resize", (e) => {
+    let scrollHeight = document.getElementById('tic-tac-toe').scrollHeight;
+    let width = window.innerWidth;
+    let winText = document.querySelector('.winner.text');
+    let sign = document.querySelector('.winner.sign');
+    // winText.style.top = `${scrollHeight * 0.15}px`;
+    // if (window.innerWidth > 600) {
+    //     sign.style.top = `${scrollHeight * 0.3}px`;
+    // } else {
+    //     sign.style.top = `${scrollHeight * 0.50}px`;
+    // }
+    winText.style.top = `clamp(15%, ${(1200/width) * 15}%, 30%)`;
+    sign.style.top = `clamp(30%, ${(1200/width) * 30}%, 80%)`;
+});
