@@ -125,22 +125,26 @@
 .rst {
     width: 100%;
     margin: auto;
+    display: flex;
 }
 
 .restart {
     color: var(--buttonTextColor);
-    width: 100%;
+    width: 30%;
+    min-width: 120px;
+    margin: 0 auto;
     height: 3em;
     border: none;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 24px;
+    align-self: center;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .restart:hover {
-    color: var(--mainColor);
-    background-color: var(--buttonTextColor);
+    transform: scale(1.5);
 }
 
 /* select {
