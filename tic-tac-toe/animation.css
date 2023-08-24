@@ -92,7 +92,7 @@
 }
 
 .blur {
-    -webkit-animation: blur 0.2s;
+    -webkit-animation: blur 0.5s;
     -webkit-animation-fill-mode: forwards;
 }
 

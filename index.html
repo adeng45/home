@@ -27,307 +27,306 @@
 	<script defer src="calculator/script.js"></script>
 </head>
 <body>
-	<div class="greeting-wrapper">
-		<h1>Hi, I'm Anthony.</h1>
-	</div>
-	<div class="body">
-		<section class="s1 intro">
+	<div class="body-wrapper">
+		<div class="greeting-wrapper">
+			<h1>Hi, I'm Anthony.</h1>
+		</div>
+		<div class="body">
+			<section class="s1 intro">
 
-			<div class="main-container top-edge side-edge">
+				<div class="main-container top-edge side-edge">
 
-				<div class="intro-wrapper">
-					<div class="nav-wrapper">
+					<div class="intro-wrapper">
+						<div class="nav-wrapper">
 
-						<div class="dots-wrapper">
-							<div class="dot-1 browser-dot"></div>
-							<div class="dot-2 browser-dot"></div>
-							<div class="dot-3 browser-dot"></div>
+							<div class="dots-wrapper">
+								<div class="dot-1 browser-dot"></div>
+								<div class="dot-2 browser-dot"></div>
+								<div class="dot-3 browser-dot"></div>
+							</div>
+							
+
+							<ul class="navigation" id="navigation">
+								<li class="nav-projects"><a href="#projects"><div>Projects</div></a></li>
+								<li class="nav-skills"><a href="#skill"><div>Skills</div></a></li>
+								<li class="nav-resume"><a href="#contact"><div>Resume</div></a></li>
+								<li class="nav-contact"><a href="#contact"><div>Contact</div></a></li>
+							</ul>
 						</div>
+
+						<div class="left-column">
+							<img id="profile_pic" src="images/tree.jpg">
+							<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+
+							<div id="theme-options-wrapper">
+								<div data-mode="light" id="light-mode" class="theme-dot"></div>
+								<div data-mode="green" id="green-mode" class="theme-dot"></div>
+								<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+								<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+							</div>
+
+							<p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
+						</div>
+
+						<div class="right-column">
+
+							<div id="preview-shadow">
+								<div id="preview">
+									<div id="corner-tl" class="corner"></div>
+									<div id="corner-tr" class="corner"></div>
+									<h3>What I Do</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+									<div id="corner-br" class="corner"></div>
+									<div id="corner-bl" class="corner"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="s1 widgets"> 
+
+				<div class="main-container side-edge no-pad-bottom">
+
+					<div class="widgets-wrapper">
+						<div class="left">&#8249;</div>
 						
+						<div class="frames">
+							<div class="frame2">
 
-						<ul class="navigation" id="navigation">
-							<li class="nav-projects"><a href="#projects"><div>Projects</div></a></li>
-							<li class="nav-skills"><a href="#skill"><div>Skills</div></a></li>
-							<li class="nav-resume"><a href="#contact"><div>Resume</div></a></li>
-							<li class="nav-contact"><a href="#contact"><div>Contact</div></a></li>
-						</ul>
-					</div>
+								<div id="tic-tac-toe">
 
-					<div class="left-column">
-						<img id="profile_pic" src="images/tree.jpg">
-						<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
-
-						<div id="theme-options-wrapper">
-							<div data-mode="light" id="light-mode" class="theme-dot"></div>
-							<div data-mode="green" id="green-mode" class="theme-dot"></div>
-							<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-							<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-						</div>
-
-						<p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
-					</div>
-
-					<div class="right-column">
-
-						<div id="preview-shadow">
-							<div id="preview">
-								<div id="corner-tl" class="corner"></div>
-								<div id="corner-tr" class="corner"></div>
-								<h3>What I Do</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-								<div id="corner-br" class="corner"></div>
-								<div id="corner-bl" class="corner"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s1 widgets"> 
-
-			<div class="main-container side-edge">
-
-				<div class="widgets-wrapper">
-					<div class="left">&#8249;</div>
-					
-					<div class="frames">
-						<div class="frame1">
-
-							<div id="tic-tac-toe">
-
-								<div class="win">
-									<p class="winner hide text">The winner is:</p>
-									<p class="winner sign hide">None</p>
-								</div>
-							
-								<div class="tcard">
-									<div class="item select">
-										<form action="" class="form">
-											<select name="levels" id="levels">
-												<option value="easy">Easy</option>
-												<option value="medium">Medium</option>
-												<option value="hard">Hard</option>
-												<option value="unbeatable">Unbeatable</option>
-											</select>
-										</form>
+									<div class="win">
+										<p class="winner hide text">The winner is:</p>
+										<p class="winner sign hide">None</p>
 									</div>
-									<div class="item player">
-										<button class="btn btn-p x">X</button>
-										<button class="btn btn-p o">O</button>
-									</div>
-									<div class="item board">
-										<button class="field"><p></p></button>
-										<button class="field"><p></p></button>
-										<button class="field no-r"><p></p></button>
-										<button class="field"><p></p></button>
-										<button class="field"><p></p></button>
-										<button class="field no-r"><p></p></button>
-										<button class="field no-b"><p></p></button>
-										<button class="field no-b"><p></p></button>
-										<button class="field no-b no-r"><p></p></button>
-									</div>
-									<div class="item rst">
-										<button class="btn restart">Restart</button>
+								
+									<div class="tcard">
+										<div class="item select">
+											<form action="" class="form">
+												<select name="levels" id="levels">
+													<option value="easy">Easy</option>
+													<option value="medium">Medium</option>
+													<option value="hard">Hard</option>
+													<option value="unbeatable">Unbeatable</option>
+												</select>
+											</form>
+										</div>
+										<div class="item player">
+											<button class="btn btn-p x">X</button>
+											<button class="btn btn-p o">O</button>
+										</div>
+										<div class="item board">
+											<button class="field"><p></p></button>
+											<button class="field"><p></p></button>
+											<button class="field no-r"><p></p></button>
+											<button class="field"><p></p></button>
+											<button class="field"><p></p></button>
+											<button class="field no-r"><p></p></button>
+											<button class="field no-b"><p></p></button>
+											<button class="field no-b"><p></p></button>
+											<button class="field no-b no-r"><p></p></button>
+										</div>
+										<div class="item rst">
+											<button class="btn restart">Restart</button>
+										</div>
 									</div>
 								</div>
+								
 							</div>
-							
-						</div>
 
-						<div class="frame3">
-							<div id="solitaire">
-								<section id="game-board">
-									<section id="topRow">
-										<div id="pile" class="card outline"></div>
-										<div id="draw" class="card outline"></div>
-										<div id="ace1" class="card outline"></div>
-										<div id="ace2" class="card outline"></div>
-										<div id="ace3" class="card outline"></div>
-										<div id="ace4" class="card outline"></div>
+							<div class="frame1">
+								<div id="solitaire">
+									<section id="game-board">
+										<section id="topRow">
+											<div id="pile" class="card outline"></div>
+											<div id="draw" class="card outline"></div>
+											<div id="ace1" class="card outline"></div>
+											<div id="ace2" class="card outline"></div>
+											<div id="ace3" class="card outline"></div>
+											<div id="ace4" class="card outline"></div>
+										</section>
+										<section id="bottomRow">
+											<div id="stack1" class="card outline"></div>
+											<div id="stack2" class="card outline"></div>
+											<div id="stack3" class="card outline"></div>
+											<div id="stack4" class="card outline"></div>
+											<div id="stack5" class="card outline"></div>
+											<div id="stack6" class="card outline"></div>
+											<div id="stack7" class="card outline"></div>
+										</section>
 									</section>
-									<section id="bottomRow">
-										<div id="stack1" class="card outline"></div>
-										<div id="stack2" class="card outline"></div>
-										<div id="stack3" class="card outline"></div>
-										<div id="stack4" class="card outline"></div>
-										<div id="stack5" class="card outline"></div>
-										<div id="stack6" class="card outline"></div>
-										<div id="stack7" class="card outline"></div>
-									</section>
-								</section>
-								<footer>
-									<div id="score">score - 0</div>
-									<div id="timer"></div>
-									<button id="resetButton">New Game</button>
-								</footer>
-							</div>
-						</div> 
-
-						<div class="frame2">
-							<div class="calculator">
-								<div id="display">
-									<div class="no-overflow"><span>0</span></div>
+									<footer>
+										<div id="score">score - 0</div>
+										<div id="timer"></div>
+										<button id="resetButton">New Game</button>
+									</footer>
 								</div>
-								<div class="buttons">
-									<button class="op">C</button>					
-									<button class="op">(</button>
-									<button class="op">)</button>
-									<button class="op">DEL</button>
-									<button class="op">+</button>
-									<button class="digit">1</button>
-									<button class="digit">2</button>
-									<button class="digit">3</button>				
-									<button class="op">-</button>
-									<button class="digit">4</button>
-									<button class="digit">5</button>
-									<button class="digit">6</button>
-									<button class="op">*</button>
-									<button class="digit">7</button>
-									<button class="digit">8</button>
-									<button class="digit">9</button>
-									<button class="op lcorner">÷</button>
-									<button class="digit">.</button>
-									<button class="digit">0</button>
-									<button class="sop rcorner">=</button>
+							</div> 
+
+							<div class="frame3">
+								<div class="calculator">
+									<div id="display">
+										<div class="no-overflow"><span>0</span></div>
+									</div>
+									<div class="buttons">
+										<button class="op">C</button>					
+										<button class="op">(</button>
+										<button class="op">)</button>
+										<button class="op">DEL</button>
+										<button class="op">+</button>
+										<button class="digit">1</button>
+										<button class="digit">2</button>
+										<button class="digit">3</button>				
+										<button class="op">-</button>
+										<button class="digit">4</button>
+										<button class="digit">5</button>
+										<button class="digit">6</button>
+										<button class="op">*</button>
+										<button class="digit">7</button>
+										<button class="digit">8</button>
+										<button class="digit">9</button>
+										<button class="op lcorner">÷</button>
+										<button class="digit">.</button>
+										<button class="digit">0</button>
+										<button class="sop rcorner">=</button>
+									</div>
 								</div>
 							</div>
 						</div>
+						<div class="right">&#8250;</div>
 					</div>
-					<div class="right">&#8250;</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
 
-		<section class="s1" id="projects">
-			<div class="main-container side-edge">
+			<section class="s1" id="projects">
+				<div class="main-container side-edge no-pad-bottom">
 
-				<div class="post-wrapper">
+					<div class="post-wrapper">
 
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="">
-							<div class="post-preview">
-								<h6 class="post-title">Proj1</h6>
-								<p class="post-intro">Proj1</p>
-								<a href="post.html">Read More</a>
-							</div>
+						<div>
+							<a class="post">
+								<div class="desc">
+									Project 1 Text
+								</div>
+								<img class="thumbnail" src="images/tree.jpg">
+							</a>
 						</div>
-					</div>
 
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="">
-							<div class="post-preview">
-								<h6 class="post-title">Proj2</h6>
-								<p class="post-intro">Proj2</p>
-								<a href="post.html">Read More</a>
-							</div>
+						<div>
+							<a class="post">
+								<div class="desc">
+									Project 2 Text
+								</div>
+								<img class="thumbnail" src="images/tree.jpg">
+							</a>
 						</div>
-					</div>
 
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="">
-							<div class="post-preview">
-								<h6 class="post-title">Proj3</h6>
-								<p class="post-intro">Proj3</p>
-								<a href="post.html">Read More</a>
-							</div>
+						<div>
+							<a class="post">
+								<div class="desc">
+									Project 3 Text
+								</div>
+								<img class="thumbnail" src="images/tree.jpg">
+							</a>
 						</div>
-					</div>
 
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
 
-		<section class="s1" id="skill">
-					
-			<div class="main-container side-edge">
+			<section class="s1" id="skill">
+						
+				<div class="main-container no-pad-bottom">
 
-				<div id="skills">
+					<div id="skills">
 
-					<div class="skills-wrapper">
-						<div class="languages">
-							<div>
-								<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Languages</u>
-								<ul>
-									<li class="skill"><img src="images/javascript-logo-svgrepo-com.svg" class="logo"><div>JavaScript</div></li>
-									<li class="skill"><img src="images/python-logo-only.svg" class="logo"><div>Python</div></li>
-									<li class="skill"><img src="images/c-logo-only.svg" class="logo"><div>C</div></li>
-									<li class="skill"><img src="images/java-logo-only.svg" class="logo"><div>Java</div></li>
-									<li class="skill"><img src="images/rust-logo-only.svg" class="logo"><div>Rust</div></li>
-								</ul>
+						<div class="skills-wrapper">
+							<div class="languages">
+								<div>
+									<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Languages</u>
+									<ul>
+										<li class="skill"><img src="images/javascript-logo-svgrepo-com.svg" class="logo"><div>JavaScript</div></li>
+										<li class="skill"><img src="images/python-logo-only.svg" class="logo"><div>Python</div></li>
+										<li class="skill"><img src="images/c-logo-only.svg" class="logo"><div>C</div></li>
+										<li class="skill"><img src="images/java-logo-only.svg" class="logo"><div>Java</div></li>
+										<li class="skill"><img src="images/rust-logo-only.svg" class="logo"><div>Rust</div></li>
+									</ul>
+								</div>
+							</div>
+							<div class="dev-tools">
+								<div>
+									<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Developer Tools</u>
+									<ul>
+										<li class="skill"><img src="images/html-logo-only.svg" class="logo"><div>HTML</div></li>
+										<li class="skill"><img src="images/css-logo-only.svg" class="logo"><div>CSS</div></li>
+										<li class="skill"><img src="images/react-logo-only.svg" class="logo"><div>ReactJS</div></li>
+										<li class="skill"><img src="images/node-logo-only.svg" class="logo"><div>NodeJS</div></li>
+										<li class="skill"><img src="images/mongodb-logo-only.svg" class="logo"><div>SQL - MongoDB</div></li>
+										<li class="skill"><img src="images/express-logo.svg" class="logo"><div>ExpressJS</div></li>
+									</ul>
+								</div>
+							</div>
+							<div class="misc">
+								<div>
+									<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Other/Misc</u>
+									<ul>
+										<li class="skill"><img src="images/green_check.svg" class="logo"><div>pandas</div></li>
+										<li class="skill"><img src="images/green_check.svg" class="logo"><div>numpy</div></li>
+										<li class="skill"><img src="images/green_check.svg" class="logo"><div>Jira</div></li>
+										<li class="skill"><img src="images/green_check.svg" class="logo"><div>Confluence</div></li>
+										<li class="skill"><img src="images/green_check.svg" class="logo"><div>Jest</div></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="dev-tools">
-							<div>
-								<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Developer Tools</u>
-								<ul>
-									<li class="skill"><img src="images/html-logo-only.svg" class="logo"><div>HTML</div></li>
-									<li class="skill"><img src="images/css-logo-only.svg" class="logo"><div>CSS</div></li>
-									<li class="skill"><img src="images/react-logo-only.svg" class="logo"><div>ReactJS</div></li>
-									<li class="skill"><img src="images/node-logo-only.svg" class="logo"><div>NodeJS</div></li>
-									<li class="skill"><img src="images/mongodb-logo-only.svg" class="logo"><div>SQL - MongoDB</div></li>
-									<li class="skill"><img src="images/express-logo.svg" class="logo"><div>ExpressJS</div></li>
-								</ul>
-							</div>
-						</div>
-						<div class="misc">
-							<div>
-								<u class="skills-header" style="font-family: 'Russo One', sans-serif;">Other/Misc</u>
-								<ul>
-									<li class="skill"><img src="images/green_check.svg" class="logo"><div>pandas</div></li>
-									<li class="skill"><img src="images/green_check.svg" class="logo"><div>numpy</div></li>
-									<li class="skill"><img src="images/green_check.svg" class="logo"><div>Jira</div></li>
-									<li class="skill"><img src="images/green_check.svg" class="logo"><div>Confluence</div></li>
-									<li class="skill"><img src="images/green_check.svg" class="logo"><div>Jest</div></li>
-								</ul>
-							</div>
-						</div>
+
 					</div>
-
 				</div>
-			</div>
-			
-		</section>
+				
+			</section>
 
-		<section class="s1" id="contact">
+			<section class="s1" id="contact">
 
-			<div class="main-container side-edge">
+				<div class="main-container side-edge">
 
-				<form id="contact-form">
-					
-					<input type="hidden" name="access_key" value="891ed976-b4f7-4f94-96cd-382191dfcfc1">
+					<form id="contact-form">
+						
+						<input type="hidden" name="access_key" value="891ed976-b4f7-4f94-96cd-382191dfcfc1">
 
-					<div class="input-container">
-						<label for="name">Name:</label>
-						<input class="input-field" id="name" type="text" name="name" required="required">
-					</div>
+						<div class="input-container">
+							<label for="name">Name:</label>
+							<input class="input-field" id="name" type="text" name="name" required="required">
+						</div>
 
-					<div class="input-container">
-						<label for="subject">Subject:</label>
-						<input class="input-field" id="subject" type="text" name="subject" required="required">
-					</div>
+						<div class="input-container">
+							<label for="subject">Subject:</label>
+							<input class="input-field" id="subject" type="text" name="subject" required="required">
+						</div>
 
-					<div class="input-container">
-						<label for="email">Email:</label>
-						<input class="input-field" id="email" type="email" name="email" required="required">
-					</div>
+						<div class="input-container">
+							<label for="email">Email:</label>
+							<input class="input-field" id="email" type="email" name="email" required="required">
+						</div>
 
-					<div class="input-container">
-						<label for="message">Message:</label>
-						<textarea class="input-field" id="message" name="message" required="required"></textarea>
-					</div>
+						<div class="input-container">
+							<label for="message">Message:</label>
+							<textarea class="input-field" id="message" name="message" required="required"></textarea>
+						</div>
 
-					<button type="submit" id="submit-btn"><div id="submit-btn-text">Send</div></button>
-				</form>
-			</div>
-		</section> 
+						<button type="submit" id="submit-btn"><div id="submit-btn-text">Send</div></button>
+					</form>
+				</div>
+			</section> 
+		</div>
 	</div>
-
+	<footer>
+		Hi
+	</footer>
 	<script defer type="text/javascript" src="script.js"></script>
 </body>
+
 </html>

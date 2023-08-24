@@ -133,10 +133,10 @@ const focusInvalid = (form) => {
 
 
 // FRAME SWITCHING
-let tic_tac_toe = document.querySelector('.frame1');
-let solitaire = document.querySelector('.frame2');
+let solitaire = document.querySelector('.frame1');
+let tic_tac_toe = document.querySelector('.frame2');
 let calculator = document.querySelector('.frame3');
-const frames = [tic_tac_toe, solitaire, calculator];
+const frames = [solitaire, tic_tac_toe, calculator];
 let shownFrame = 0;
 
 function show(frame) {
@@ -145,7 +145,7 @@ function show(frame) {
 	frames[(frame + 2) % 3].style.display = 'none';
 }
 
-document.querySelector('.left').addEventListener('click', (e) => {
+document.querySelector('.right').addEventListener('click', (e) => {
 	e.target.style.pointerEvents = 'none';
 	shownFrame = (shownFrame + 1) % 3;
 	show(shownFrame);
@@ -154,7 +154,7 @@ document.querySelector('.left').addEventListener('click', (e) => {
 	}, 100);
 })
 
-document.querySelector('.right').addEventListener('click', (e) => {
+document.querySelector('.left').addEventListener('click', (e) => {
 	e.target.style.pointerEvents = 'none';
 	shownFrame = shownFrame === 0 ? 2 : shownFrame - 1;
 	show(shownFrame);
@@ -164,3 +164,4 @@ document.querySelector('.right').addEventListener('click', (e) => {
 })
 
 show(shownFrame);
+

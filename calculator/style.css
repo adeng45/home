@@ -83,11 +83,11 @@
     transition: background-color 0.3s;
 }
 
-.buttons:last-child {
-    border-bottom-left-radius: 16px;
+.lcorner {
+    border-bottom-left-radius: 6px;
 }
 
-
-
-
+.rcorner {
+    border-bottom-right-radius: 6px;
+}
 
