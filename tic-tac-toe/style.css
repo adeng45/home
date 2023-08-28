@@ -4,21 +4,16 @@
     width: 100%;
     font-size: 36px;
     font-weight: 700;
-    background-color: var(--secondaryColor);
     overflow: auto;
     display: flex;
 }
 
-#tic-tac-toe > * {
-    background-color: var(--secondaryColor);
-}
 
 .item {
     margin: 0.4em;
 }
 
 .board {
-    background-color: var(--secondaryColor);
     display: grid;
     grid-template-columns: 80px 80px 80px;
     grid-template-rows: 80px 80px 80px;
@@ -43,13 +38,13 @@
 .field {
     font-weight: 600;
     font-size: 54px;
-    background-color: var(--secondaryColor);
     color: #12232E;
     border: none;
     border-radius: 0px;
     border-bottom: 3px solid var(--gridLineColor);
     border-right: 3px solid var(--gridLineColor);
     outline: none;
+    background-color: var(--mainColor);
 }
 
 .field.no-r {
@@ -65,6 +60,7 @@
 .field p {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
+    color: var(--gridLineColor);
 }
 
 .field:hover {
@@ -72,9 +68,9 @@
 }
 
 .btn {
-    background-color: var(--secondaryColor);
     border: 1px solid lightgrey;
     border-radius: 10px;
+    background-color: var(--mainColor);
 }
 
 .btn:focus {
@@ -101,8 +97,8 @@
     color: var(--buttonTextColor);
     font-weight: 600;
     border: 2px solid var(--buttonTextColor);
-    -webkit-box-shadow: -1px 7px 22px -6px grey;
-    box-shadow: -1px 7px 22px -6px grey;
+    -webkit-box-shadow: -1px 7px 22px -6px none;
+    box-shadow: -1px 7px 22px -6px none;
     transition: all 0.3s;
 }
 

@@ -1,7 +1,7 @@
 :root{
 	--mainColor:#46344E;
 	--secondaryColor:#382a3f;
-	--borderColor:#1d1520;
+	--borderColor:white;
 	--mainText:#fff;
 	--secondaryText:#eeeeee;
 	--themeDotBorder:#FFF;
@@ -9,11 +9,15 @@
 	--previewShadow:#2b202f;
 	--buttonColor:#8534a3;
 	--slideButtonColor: white;
-	--s1textColor: black;
+	--s1textColor: white;
 	--s1headerTextColor: white;
+	--windowBorderColor: white;
+	--skillTextColor: white;
+	--inputBorderColor: white;
+
 
 	/* tic-tac-toe */
-	--winColor: black;
+	--winColor: white;
 	--gridLineColor: white;
 	--selectTextColor: #203647;
 	--buttonTextColor: white;
@@ -23,7 +27,7 @@
 	--resetButtonColor: none;
 	--gameBoardColor: none;
 	--gameBoardBorderColor: white;
-	--footerDataTextColor: lightgrey;
+	--footerDataTextColor: white;
 	--resetButtonHoverColor: white;
-	--resetButtonHoverTextColor: #46344E;
+	--resetButtonHoverTextColor: white;
 }

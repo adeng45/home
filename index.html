@@ -34,7 +34,7 @@
 		<div class="body">
 			<section class="s1 intro">
 
-				<div class="main-container top-edge side-edge">
+				<div class="main-container top-edge side-edge pad-bottom">
 
 					<div class="intro-wrapper">
 						<div class="nav-wrapper">
@@ -87,9 +87,11 @@
 
 			<section class="s1 widgets"> 
 
-				<div class="main-container side-edge no-pad-bottom">
+				<div class="main-container side-edge pad-bottom">
 
-					<div class="widgets-wrapper">
+					<h4>My widgets...</h4>
+
+					<div class="widgets-wrapper pad-top">
 						<div class="left">&#8249;</div>
 						
 						<div class="frames">
@@ -201,15 +203,19 @@
 			</section>
 
 
-			<section class="s1" id="projects">
-				<div class="main-container side-edge no-pad-bottom">
+			<section class="s1">
+				<div class="main-container side-edge pad-top pad-bottom">
+
+					<h4>My templates...</h4>
 
 					<div class="post-wrapper">
 
 						<div>
 							<a class="post">
 								<div class="desc">
-									Project 1 Text
+									<img src="images/html-logo-only.svg" class="logo">
+									<img src="images/css-logo-only.svg" class="logo">
+									<img src="images/javascript-logo-svgrepo-com.svg" class="logo">
 								</div>
 								<img class="thumbnail" src="images/tree.jpg">
 							</a>
@@ -218,7 +224,47 @@
 						<div>
 							<a class="post">
 								<div class="desc">
-									Project 2 Text
+									<img src="images/html-logo-only.svg" class="logo">
+									<img src="images/css-logo-only.svg" class="logo">
+									<img src="images/javascript-logo-svgrepo-com.svg" class="logo">
+								</div>
+								<img class="thumbnail" src="images/tree.jpg">
+							</a>
+						</div>
+
+						<div>
+							<a class="post">
+								<div class="desc" style="display: flex; flex-direction: column;">
+									<div style="display: flex; justify-content: space-between; gap: 30px;">
+										<img src="images/html-logo-only.svg" class="logo">
+										<img src="images/css-logo-only.svg" class="logo">
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 30px;">
+										<img src="images/javascript-logo-svgrepo-com.svg" class="logo">
+										<img src="images/react-logo-only.svg" class="logo">
+									</div>
+								</div>
+								<img class="thumbnail" src="images/tree.jpg">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="s1" id="projects">
+				<div class="main-container side-edge pad-top pad-bottom">
+
+					<h4>My projects...</h4>
+
+					<div class="post-wrapper pad-top">
+
+						<div>
+							<a class="post">
+								<div class="desc">
+									<img src="images/html-logo-only.svg" class="logo">
+									<img src="images/css-logo-only.svg" class="logo">
+									<img src="images/javascript-logo-svgrepo-com.svg" class="logo">
 								</div>
 								<img class="thumbnail" src="images/tree.jpg">
 							</a>
@@ -227,7 +273,25 @@
 						<div>
 							<a class="post">
 								<div class="desc">
-									Project 3 Text
+									<img src="images/html-logo-only.svg" class="logo">
+									<img src="images/css-logo-only.svg" class="logo">
+									<img src="images/javascript-logo-svgrepo-com.svg" class="logo">
+								</div>
+								<img class="thumbnail" src="images/tree.jpg">
+							</a>
+						</div>
+
+						<div>
+							<a class="post">
+								<div class="desc" style="display: flex; flex-direction: column;">
+									<div style="display: flex; justify-content: space-between; gap: 30px;">
+										<img src="images/html-logo-only.svg" class="logo">
+										<img src="images/css-logo-only.svg" class="logo">
+									</div>
+									<div style="display: flex; justify-content: space-between; gap: 30px;">
+										<img src="images/javascript-logo-svgrepo-com.svg" class="logo">
+										<img src="images/react-logo-only.svg" class="logo">
+									</div>
 								</div>
 								<img class="thumbnail" src="images/tree.jpg">
 							</a>
@@ -239,10 +303,12 @@
 
 
 			<section class="s1" id="skill">
-						
-				<div class="main-container no-pad-bottom">
 
-					<div id="skills">
+				<div class="main-container pad-top pad-bottom">
+					
+					<h4>Skills</h4>
+
+					<div id="skills" class="pad-top">
 
 						<div class="skills-wrapper">
 							<div class="languages">
@@ -291,7 +357,9 @@
 
 			<section class="s1" id="contact">
 
-				<div class="main-container side-edge">
+				<h4>Contact me</h4>
+
+				<div class="main-container side-edge pad-bottom">
 
 					<form id="contact-form">
 						
@@ -323,9 +391,9 @@
 			</section> 
 		</div>
 	</div>
-	<footer>
+	<!-- <footer>
 		Hi
-	</footer>
+	</footer> -->
 	<script defer type="text/javascript" src="script.js"></script>
 </body>
 

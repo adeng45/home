@@ -1,6 +1,6 @@
 :root{
-	--mainColor:#15202B;
-	--secondaryColor:#192734;
+	--mainColor:#192734;
+	--secondaryColor:#15202B;
 	--borderColor:#164D56;
 	--mainText:#fff;
 	--secondaryText:#eeeeee;
@@ -8,22 +8,25 @@
 	--previewBg:rgb(25, 39, 52, 0.8);
 	--previewShadow:#111921;
 	--buttonColor:#17a2b8;
-	--slideButtonColor: white;
-	--s1textColor: #066878;
+	--slideButtonColor: #17a2b8;
+	--s1textColor: white;
 	--s1headerTextColor: white;
+	--windowBorderColor: #17a2b8;
+	--skillTextColor: white;
+	--inputBorderColor: #17a2b8;
 
 	/* tic-tac-toe */
     --winColor: white;
-	--gridLineColor: #203647;
+	--gridLineColor: #17a2b8;
 	--selectTextColor: #203647;
-	--buttonTextColor: white;
+	--buttonTextColor: #17a2b8;
 	--tborderColor: white;
 
 	/* solitaire */
 	--resetButtonColor: none;
 	--gameBoardColor: none;
-	--gameBoardBorderColor: white;
-	--footerDataTextColor: lightgrey;
-	--resetButtonHoverColor: white;
+	--gameBoardBorderColor: #17a2b8;
+	--footerDataTextColor: #17a2b8;
+	--resetButtonHoverColor: #17a2b8;
 	--resetButtonHoverTextColor: #15202B;
 }

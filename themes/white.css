@@ -1,7 +1,7 @@
 :root{
 	--mainColor:#eaeaea;
 	--secondaryColor:#fff;
-	--borderColor:#c1c1c1;
+	--borderColor:black;
 	--mainText:black;
 	--secondaryText:#4b5156;
 	--themeDotBorder:#24292e;
@@ -11,6 +11,10 @@
 	--slideButtonColor: black;
 	--s1textColor: black;
 	--s1headerTextColor: white;
+	--windowBorderColor: black;
+	--skillTextColor: black;
+	--inputBorderColor: #161914;
+
 
     /* tic-tac-toe */
     --winColor: black;
