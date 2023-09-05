@@ -41,24 +41,24 @@ function delay(t) {
 }
 
 // RESIZE
-let open = true;
-let closeDots = document.getElementsByClassName('dot-1');
-for (let i = 0; i < closeDots.length; i++) {
-	closeDots[i].addEventListener('click', () => {
-		if (!open) { return; }
-		open = !open;
-		document.querySelector('.intro > .main-container').classList.toggle('close');
-	})
-}
+// let open = true;
+// let closeDots = document.getElementsByClassName('dot-1');
+// for (let i = 0; i < closeDots.length; i++) {
+// 	closeDots[i].addEventListener('click', () => {
+// 		if (!open) { return; }
+// 		open = !open;
+// 		document.querySelector('.intro > .main-container').classList.toggle('close');
+// 	})
+// }
 
-let openDots = document.getElementsByClassName('dot-3');
-	for (let i = 0; i < openDots.length; i++) {
-	openDots[i].addEventListener('click', () => {
-		if (open) { return; }
-		open = !open;
-		document.querySelector('.intro > .main-container').classList.toggle('close');
-	})
-}
+// let openDots = document.getElementsByClassName('dot-3');
+// 	for (let i = 0; i < openDots.length; i++) {
+// 	openDots[i].addEventListener('click', () => {
+// 		if (open) { return; }
+// 		open = !open;
+// 		document.querySelector('.intro > .main-container').classList.toggle('close');
+// 	})
+// }
 
 // FORM
 let postForm = function(form) {
