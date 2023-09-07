@@ -1,22 +1,24 @@
 // THEME
-let theme = localStorage.getItem('theme');
+// let theme = localStorage.getItem('theme');
 
-if (theme == null) {
-	setTheme('light');
-}
-else {
-	setTheme(theme);
-}
+// if (theme == null) {
+// 	setTheme('light');
+// }
+// else {
+// 	setTheme(theme);
+// }
+
+setTheme('light');
 
 let themeDots = document.getElementsByClassName('theme-dot')
 
-for (var i = 0; themeDots.length > i; i++) {
-	themeDots[i].addEventListener('click', function() {
-		let mode = this.dataset.mode;
-		console.log('Option clicked:', mode);
-		setTheme(mode);
-	})
-}
+// for (var i = 0; themeDots.length > i; i++) {
+// 	themeDots[i].addEventListener('click', function() {
+// 		let mode = this.dataset.mode;
+// 		console.log('Option clicked:', mode);
+// 		setTheme(mode);
+// 	})
+// }
 
 function setTheme(mode) {
 	if (mode == 'light') {
