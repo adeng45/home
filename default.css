@@ -503,13 +503,26 @@ h6 { font-size: 16px;}
 	width: 100%;
 	height: 100%;
 	background-color: lightgray;
-	display: flex;
+	/* display: flex; */
 }
 
-.thumbnail.incomplete > p {
-	font-size: 1.5em;
+.thumbnail.incomplete > div {
+	height: 100%;
+	transform: translateY(37%);
+}	
+
+.thumbnail.incomplete > div > p {
+	font-size: 1.5rem;
 	text-align: center;
-	margin: auto;
+	margin: 0;
+}
+
+.thumbnail.incomplete > div > p:first-child {
+	padding-right: 2rem;
+}	
+
+.thumbnail.incomplete > div > p:last-child {
+	padding-left: 2rem;
 }	
 
 .desc {
