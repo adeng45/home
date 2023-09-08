@@ -476,8 +476,8 @@ h6 { font-size: 16px;}
 
 /* PROJECTS */
 .post-wrapper{
-	display: flex;
-	grid-template-columns: repeat(auto-fit, 250px);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 300px);
 	gap: 100px;
 	justify-content: center;
 	padding-top: 80px;
